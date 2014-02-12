@@ -1,10 +1,11 @@
 import os
 
-dict = {}
+
+"""dict = {}
+term_dict={}
+counted=0;
 found={}
 
-#retrieves the terms in the corpus along with the number of documents the terms appear in
-# and places them in the dictionary "dict"
 for a in os.listdir("corpus"):
     f = open("corpus/"+a)
     y = a.split(".")
@@ -23,16 +24,15 @@ for a in os.listdir("corpus"):
 
          
              
-#places the content of the dictionary in a file
+
 g= open("Dictionary.txt","w")
 for k,v in sorted(dict.items()):
     g.write(str(k)+" : "+ str(v)+"\n")
 
 g.close()
+"""
 
 
-#opens the dictionary.txt and retrieves the terms and then constructs a postings list for each term in the
-#dictionary
 h = open("Dictionary.txt","r")
 list = open("PostingsList.txt","a")
 for j in h:
@@ -71,3 +71,7 @@ for j in h:
 list.close()
 
 
+
+"""keys = dict.viewkeys()
+values = dict.viewvalues()
+"""
